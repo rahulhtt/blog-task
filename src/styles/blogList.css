@@ -1,0 +1,76 @@
+.columns-with-icons1 {
+  margin: 0;
+  align-self: stretch;
+  height: 52px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+}
+.columns-with-icons-child {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  background-color: var(--color-gray-100);
+}
+.featured-title {
+  margin: 0;
+  align-self: stretch;
+  height: 37px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+}
+.paragraph-of-text,
+.small-button {
+  position: relative;
+  letter-spacing: -0.32px;
+  font-family: var(--body-reg);
+}
+.paragraph-of-text {
+  align-self: stretch;
+  font-size: var(--body-reg-size);
+}
+.small-button {
+  font-size: var(--font-size-smi);
+  color: var(--bs-white);
+  text-align: left;
+}
+.chevron-right-icon {
+  height: 12px;
+  width: 12px;
+  position: relative;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0 var(--padding-2xs);
+  background-color: var(--bs-blue);
+  height: 32px;
+  border-radius: var(--br-9xs);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 0 10px;
+  white-space: nowrap;
+}
+
+.features {
+  width: 100%;
+  position: relative;
+  background-color: var(--bs-light);
+  overflow: hidden;
+  align-items: center;
+  padding: 62px var(--padding-xl) 107px;
+  gap: 30px 0;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--bs-dark);
+  font-family: var(--font-att-aleck-sans);
+}

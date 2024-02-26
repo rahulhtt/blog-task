@@ -1,0 +1,507 @@
+.arrow-back-icon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  min-height: 20px;
+}
+.back {
+  position: relative;
+  font-weight: 600;
+}
+.back-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0 9px;
+}
+.personal-info,
+.step-0103 {
+  position: relative;
+  font-weight: 500;
+}
+.personal-info {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8692a6;
+}
+.personal-data-frame {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+.for-the-purpose,
+.register-individual-account1 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.register-individual-account1 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.for-the-purpose {
+  flex: 1;
+  line-height: 28px;
+}
+.line-separator-frame {
+  width: 411px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 6px;
+  box-sizing: border-box;
+  max-width: 100%;
+  flex-shrink: 0;
+  font-size: 18px;
+  color: #8692a6;
+}
+.google-login-button {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  border-top: 1px solid #f5f5f5;
+  box-sizing: border-box;
+}
+.industry-regulation-input {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px 0;
+  max-width: 100%;
+  font-size: 30px;
+}
+.your-fullname {
+  position: relative;
+  font-weight: 500;
+}
+.invictus-innocent-text-child {
+  height: 64px;
+  width: 426px;
+  position: relative;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.11);
+  border: 1px solid #1565d8;
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.name-input {
+  width: 360px;
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-family: Inter;
+  font-size: 14px;
+  background-color: transparent;
+  height: 19px;
+  position: relative;
+  color: #494949;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.invictus-innocent-text {
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.11);
+  border: 1px solid #1565d8;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  padding: 22px 30px 23px;
+}
+.input-email-password {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px 0;
+}
+.email-address {
+  position: relative;
+  font-weight: 500;
+}
+.frame-child {
+  height: 64px;
+  width: 426px;
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #8692a6;
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.enter-email-address {
+  width: 133px;
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-family: Inter;
+  font-size: 14px;
+  background-color: transparent;
+  height: 17px;
+  position: relative;
+  color: #8692a6;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.input-email-password1,
+.rectangle-parent {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.rectangle-parent {
+  border-radius: 6px;
+  border: 1px solid #8692a6;
+  padding: 23px 30px 24px;
+}
+.input-email-password1 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px 0;
+}
+.create-password {
+  position: relative;
+  font-weight: 500;
+}
+.frame-item {
+  height: 64px;
+  width: 426px;
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #8692a6;
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.enter-email-address1 {
+  position: relative;
+  font-weight: 500;
+  z-index: 1;
+}
+.show {
+  position: relative;
+  font-size: 12px;
+  color: #000;
+  text-align: right;
+  z-index: 1;
+}
+.input-email-password2,
+.rectangle-group {
+  align-self: stretch;
+  display: flex;
+  max-width: 100%;
+}
+.rectangle-group {
+  border-radius: 6px;
+  border: 1px solid #8692a6;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 32px 24px 30px;
+  gap: 20px;
+  font-size: 14px;
+  color: #8692a6;
+}
+.input-email-password2 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px 0;
+}
+.square-checkbox-solid {
+  accent-color: #1565d8;
+  margin: 0;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 20px;
+}
+.i-agree-to {
+  position: relative;
+  font-weight: 500;
+}
+.or-connection,
+.yourfullname-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0 14px;
+}
+.yourfullname-frame {
+  align-self: stretch;
+  flex-direction: column;
+  padding: 0 0 14px 1px;
+  box-sizing: border-box;
+  gap: 24px 0;
+  max-width: 100%;
+  color: #6a6f79;
+}
+.input-field-row-child {
+  height: 64px;
+  width: 426px;
+  position: relative;
+  border-radius: 6px;
+  background-color: #1565d8;
+  display: none;
+  max-width: 100%;
+}
+.register-account {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+.input-field-row {
+  cursor: pointer;
+  border: 0;
+  padding: 23px 22px 22px;
+  background-color: #1565d8;
+  align-self: stretch;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.input-field-row:hover {
+  background-color: #3b8cff;
+}
+.step-label {
+  height: 1px;
+  flex: 1;
+  border-top: 1px solid #f5f5f5;
+  box-sizing: border-box;
+}
+.error {
+  color: red;
+}
+.or,
+.step-label,
+.step-label1 {
+  position: relative;
+}
+.step-label1 {
+  height: 1px;
+  flex: 1;
+  border-top: 1px solid #f5f5f5;
+  box-sizing: border-box;
+}
+.back-navigation-button {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 1px;
+  gap: 0 34px;
+  text-align: center;
+  font-size: 12px;
+  color: #bababa;
+}
+.google-icon-child {
+  height: 64px;
+  width: 426px;
+  position: relative;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: none;
+  max-width: 100%;
+}
+.flat-color-iconsgoogle {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.register-with-google {
+  position: relative;
+  padding-left: 100px;
+  font-weight: 900;
+  z-index: 1;
+}
+.google-icon {
+  align-self: stretch;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 21px 43px 19px;
+  box-sizing: border-box;
+  gap: 0 66px;
+  max-width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+.fullname-and-email {
+  width: 447px;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  gap: 24px 0;
+}
+.fullname-and-email,
+.personal-info-input,
+.register-individual-account {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.register-individual-account {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 16px;
+  color: #000;
+}
+.personal-info-input {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 98px 0;
+  width: 800px;
+  margin-left: 200px;
+  text-align: right;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+.frame-container,
+.root-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.frame-container {
+  width: 630px;
+  align-items: flex-start;
+  padding: 20px 0;
+  box-sizing: border-box;
+  gap: 0 5px;
+  min-width: 630px;
+  max-width: 100%;
+}
+Link:hover {
+  color: #3b8cff;
+}
+
+.root-frame {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  align-items: center;
+  gap: 0 53px;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: 16px;
+  color: #8692a6;
+  font-family: Inter;
+}
+@media screen and (max-width: 1200px) {
+  .frame-container {
+    flex: 1;
+  }
+  .root-frame {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 750px) {
+  .register-individual-account1 {
+    font-size: 24px;
+  }
+  .personal-info-input {
+    margin-left: 0;
+  }
+
+  .frame-container {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+  .root-frame {
+    gap: 0 53px;
+  }
+  .back-button {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .register-individual-account1 {
+    font-size: 24px;
+  }
+  .personal-info-input {
+    margin-left: 20px;
+  }
+
+  .frame-container {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+  .root-frame {
+    gap: 0 53px;
+  }
+  .back-button {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .register-individual-account1 {
+    font-size: 18px;
+    width: 100%;
+  }
+  /* .rectangle-group  {
+    flex-wrap: wrap;
+  
+  } */
+  .register-individual-account {
+    margin: 0 10px 0 10px;
+  }
+  .back-button {
+    margin-left: 10px;
+  }
+  .back-navigation-button {
+    gap: 0 34px;
+  }
+  .google-icon {
+    gap: 0 66px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .personal-data-frame {
+    margin-right: 10px;
+    margin-top: -20px;
+  }
+  .personal-info-input {
+    min-width: 100%;
+    margin-left: 0;
+  }
+}

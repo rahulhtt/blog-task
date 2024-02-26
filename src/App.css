@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
+.image-2-icon {
+  position: absolute;
+  top: 55px;
+  left: 62px;
+  width: 159.1px;
+  height: 159.1px;
+  object-fit: contain;
+  mix-blend-mode: color;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-blue-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #3b82f6; /* Blue color */
+  opacity: 0.5;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-1-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 192px;
+  height: 192px;
+  object-fit: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.iso {
+  width: 221.1px;
+  height: 214.1px;
+  position: relative;
+  display: none;
+}
+.union-icon {
+  height: 30px;
+  width: 43.6px;
+  position: relative;
+  border-radius: 10px;
+}
+.oasis {
+  position: relative;
+  font-weight: 600;
+}
+.inner-frame-c,
+.main-frame-b {
+  display: flex;
+  flex-direction: row;
+}
+.inner-frame-c {
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0 10px;
+}
+.main-frame-b {
+  width: 264px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.group-icon,
+.group-icon1 {
+  position: absolute;
+  top: 0;
+  left: -0.1px;
+  width: 2.5px;
+  height: 56px;
+}
+.group-icon1 {
+  left: 57.4px;
+}
+.group-icon2,
+.group-icon3,
+.group-icon4,
+.group-icon5 {
+  position: absolute;
+  top: 0;
+  left: 45.9px;
+  width: 2.5px;
+  height: 56px;
+}
+.group-icon3,
+.group-icon4,
+.group-icon5 {
+  left: 34.4px;
+}
+.group-icon4,
+.group-icon5 {
+  left: 22.8px;
+}
+.group-icon5 {
+  left: 11.3px;
+}
+.vincent-o-b-i-text {
+  height: 56px;
+  flex: 1;
+  position: relative;
+}
+.text-passage {
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+.h1 {
+  margin: 0 !important;
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.the-passage-experienced {
+  flex: 1;
+  position: relative;
+  font-size: 20px;
+  line-height: 38px;
+  font-family: Inter;
+  color: #fff;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+.info-frame {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 100%;
+}
+.vincent-obi {
+  position: relative;
+  font-weight: 500;
+}
+.circle-check-full {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.step-frame,
+.vincent-obi-text {
+  display: flex;
+  justify-content: flex-start;
+}
+.vincent-obi-text {
+  flex-direction: row;
+  align-items: center;
+  gap: 0 9px;
+  font-size: 18px;
+  color: #fff;
+  font-family: Inter;
+}
+.step-frame {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px 0;
+  max-width: 100%;
+}
+.vector-path-a {
+  width: 33.5px;
+  height: 33px;
+  position: absolute;
+  margin: 0 !important;
+  right: 37.5px;
+  bottom: 0;
+  object-fit: contain;
+}
+.back-button-frame,
+.group-cluster {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.back-button-frame {
+  align-self: stretch;
   align-items: center;
+  position: relative;
+  min-height: 302px;
+}
+.group-cluster {
+  width: 473px;
+  align-items: flex-end;
+  gap: 102px 0;
+}
+.outer-frame-d {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 20px 106px;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 96px;
+  color: #00daf7;
+  font-family: Gayathri;
 }
-
-.App-link {
-  color: #61dafb;
+.vector-origin-icon {
+  height: 120.2px;
+  width: 120.2px;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.child-vector-a,
+.new-frame-e {
+  width: 110px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0;
+  box-sizing: border-box;
+}
+.child-vector-a {
+  width: 900px;
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 64px 29px 8px 0;
+  gap: 118px 0;
+  /* background-image: url(/public/images/img_frame1.png); */
+  background-color: #3b82f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 666px;
+  max-width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #fff;
+  font-family: Gilroy;
+}
+@media screen and (max-width: 1275px) {
+  .child-vector-a {
+    flex: 1;
+    padding-right: 0;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 1100px) {
+  .child-vector-a {
+    padding-top: 42px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .h1 {
+    font-size: 48px;
+    top: -50px;
+    left: -10px;
+  }
+  .group-cluster {
+    gap: 102px 0;
+  }
+  .outer-frame-d {
+    padding-bottom: 69px;
+    box-sizing: border-box;
+  }
+  .child-vector-a {
+    gap: 118px 0;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .h1 {
+    font-size: 29px;
+    top: -50px;
+    left: 0;
+  }
+  .the-passage-experienced {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .child-vector-a {
+    gap: 118px 0;
+    padding-top: 27px;
+    box-sizing: border-box;
   }
 }
