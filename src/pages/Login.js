@@ -1,65 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../App.css'
 import './register.css'
-import { Link, useNavigate } from 'react-router-dom';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { useDispatch, } from 'react-redux';
-import { setToken } from '../feature/authslice';
+import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast, ToastContainer } from 'react-toastify';
-import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+
+import useLoginForm from '../Forms/loginForm';
 const Login = () => {
 
-    const [squareCheckboxSolidChecked, setSquareCheckboxSolidChecked] = useState(true);
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const IP_ADD = process.env.REACT_APP_IP_ADD;
-    console.log(IP_ADD)
-
-    const initialValues = {
-        name: "",
-        email: "",
-        password: "",
-
-    }
-    const validationSchema = Yup.object({
-        email: Yup.string().email("Invalid email format").required('Email is required'),
-        password: Yup.string().required("Password is required"),
-    })
-
-    //register
-    const onSubmit = async () => {
-        try {
-
-            const response = await axios.post(`http://${process.env.REACT_APP_IP_ADD}:3000/login`, {
-                email: formik.values.email,
-                password: formik.values.password,
-
-            });
-            toast.success('Login successful', { position: "bottom-center", autoClose: 2000 });
-            const data = response.data
-            console.log(data)
-            const authToken = data.accessToken;
-            console.log(authToken)
-            // Dispatch the action to set the token using RTK
-            dispatch(setToken(authToken));
-            localStorage.setItem('token', authToken);
-            setTimeout(() => {
-                navigate('/home');
-            }, 2000)
-
-        } catch (error) {
-            console.log(error)
-
-        }
-    }
-
-    const formik = useFormik({
-        initialValues,
-        onSubmit,
-        validationSchema
-    })
+    const { formik, squareCheckboxSolidChecked, setSquareCheckboxSolidChecked } = useLoginForm()
 
     return (
         <>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -79,10 +79,10 @@ const BlogForm = () => {
         validationSchema
     })
 
-  
 
     return (
         <div className="bg-gray-100 flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
+            <ToastContainer limit={1} />
             <div className="w-full max-w-md space-y-8">
                 <div className="bg-white shadow-md rounded-md p-6">
                     <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">

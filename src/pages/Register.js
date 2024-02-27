@@ -1,65 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import '../App.css'
 // import './register.css'
-import { Link, useNavigate } from 'react-router-dom';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast, ToastContainer } from 'react-toastify';
-import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+import useRegisterForm from '../Forms/registerForm';
+
 const Register = () => {
 
-    // const [name, setName] = useState('')
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    const navigate = useNavigate()
-    const [squareCheckboxSolidChecked, setSquareCheckboxSolidChecked] =
-        useState(true);
-
-    const initialValues = {
-        name: "",
-        email: "",
-        password: "",
-
-    }
-    const validationSchema = Yup.object({
-        name: Yup.string().required('Name is required'),
-        email: Yup.string().email("Invalid email format").required('Email is required'),
-        password: Yup.string().required("Password is required"),
-    })
-
-    //register
-    const onSubmit = async () => {
-        try {
-            if (squareCheckboxSolidChecked === true) {
-                const response = await axios.post(`http://${process.env.REACT_APP_IP_ADD}:3000/register`, {
-                    name: formik.values.name,
-                    email: formik.values.email,
-                    password: formik.values.password,
-                });
-                toast.success('Register successful', { position: "bottom-center", autoClose: 2000 });
-                const data = response.data
-                console.log(data)
-                setTimeout(() => {
-                    navigate('/');
-                }, 2000)
-            }
-            else {
-                toast.warning("Please Agree the Terms and Conditions", { position: "top-center", autoClose: 3000 })
-            }
-
-        } catch (error) {
-            if (error.response && error.response.status === 400) {
-                toast.warning("Email Already registered", { position: "top-center", autoClose: 3000 })
-            }
-        }
-    }
-
-    const formik = useFormik({
-        initialValues,
-        onSubmit,
-        validationSchema
-    })
+    const { formik, CheckboxChecked, setCheckboxChecked } = useRegisterForm()
 
     return (
         <>
@@ -207,10 +156,10 @@ const Register = () => {
                                     <div className="or-connection">
                                         <input
                                             className="square-checkbox-solid"
-                                            checked={squareCheckboxSolidChecked}
+                                            checked={CheckboxChecked}
                                             type="checkbox"
                                             onChange={(event) =>
-                                                setSquareCheckboxSolidChecked(event.target.checked)
+                                                setCheckboxChecked(event.target.checked)
                                             }
                                         />
                                         <div className="i-agree-to">{`I agree to terms & conditions`}</div>

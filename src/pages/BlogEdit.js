@@ -7,7 +7,11 @@ import 'react-toastify/dist/ReactToastify.css'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import useAuthentication from '../Auth/useAuthentication';
+import { handleApiError, handleAuthenticationError } from '../Errors/errorHandler';
+import { fetchBlogbyId, updateBlogById } from '../Api/blogApi';
+
 const BlogEdit = () => {
+
     const { id } = useParams()
     const [Loader, setLoader] = useState(false)
     const [blogDetails, setBlogDetails] = useState({
@@ -21,6 +25,8 @@ const BlogEdit = () => {
     const isLoggedIn = useAuthentication(authToken)
     const navigate = useNavigate();
 
+
+    //handle Onchange event
     const handleChange = (e) => {
         const { name, value } = e.target;
         setBlogDetails((prevDetails) => ({
@@ -30,111 +36,50 @@ const BlogEdit = () => {
         console.log(blogDetails)
     };
 
-
-
+    //fetch the blog details by Id
     const fetchBlogList = async () => {
         if (isLoggedIn) {
             try {
-                const response = await axios.get(`http://${process.env.REACT_APP_IP_ADD}:3000/posts/${id}`, {
-                    headers: {
-                        Authorization: `Bearer ${authToken}`,
-                    },
-
-                });
-                const data = response.data;
-                console.log(data)
+                const data = await fetchBlogbyId(id, authToken);
                 setBlogDetails({
                     title: data.title,
                     author: data.author,
                     desc: data.desc
-                })
-
-                // Show success toast notification
-                toast.success('Blog list fetched successfully', { position: "top-center", autoClose: 2000 });
-
+                });
+                toast.success('Blog fetched successfully', { position: "top-center", autoClose: 2000 });
             } catch (error) {
-                if (error.response && error.response.status === 401) {
-                    // Token expired, show a message or redirect to login page
-                    toast.warning('Session expired. Please log in again.', { position: "top-center" });
-                    // You might want to redirect the user to the login page here
-                    setTimeout(() => {
-                        navigate('/')
-                    }, 4000)
-                } else {
-                    // Show generic error toast notification
-                    toast.error('Error fetching blog list', { position: "top-center", autoClose: 2000 });
-                }
+                handleApiError(error, navigate)
             }
-        }
-        else {
-
-            // Token expired, show a message or redirect to login page
-            toast.warning('Session expired. Please log in again.', { position: "top-center" });
-            // You might want to redirect the user to the login page here
-            setTimeout(() => {
-                navigate('/')
-            }, 4000)
+        } else {
+            handleAuthenticationError(navigate)
         }
     };
 
 
-    //
+    //handle editing
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoader(true)
         if (isLoggedIn) {
             try {
-
-                const response = await axios.put(`http://${process.env.REACT_APP_IP_ADD}:3000/posts/${id}`, blogDetails, {
-                    headers: {
-                        Authorization: `Bearer ${authToken}`,
-                    },
-                });
-                const data = response.data;
-                console.log("data" + data)
-                setLoader(false);
-                // Show success toast notification
-                toast.success('Blog Updated successfully', { position: "top-center", autoClose: 2000 });
-
-                setTimeout(() => {
-                    navigate('/home')
-                }, 3000)
-
+                const data = await updateBlogById(id, authToken);
+                toast.success('Blog updated successfully', { position: "top-center", autoClose: 2000 });
             } catch (error) {
-                if (error.response && error.response.status === 401) {
-                    // Token expired, show a message or redirect to login page
-                    toast.warning('Session expired. Please log in again.', { position: "top-center" });
-                    // You might want to redirect the user to the login page here
-                    setTimeout(() => {
-                        navigate('/')
-                    }, 4000)
-                } else {
-                    // Show generic error toast notification
-                    toast.error('Error to Updated blog', { position: "top-center", autoClose: 2000 });
-                }
+                handleApiError(error, navigate)
             }
+        } else {
+            handleAuthenticationError(navigate)
         }
-        else {
 
-            // Token expired, show a message or redirect to login page
-            toast.warning('Session expired. Please log in again.', { position: "top-center" });
-            // You might want to redirect the user to the login page here
-            setTimeout(() => {
-                navigate('/')
-            }, 4000)
-        }
     };
-
-
 
     useEffect(() => {
         fetchBlogList()
     }, [])
 
-
     return (
         <div className="bg-gray-100 flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
-            < ToastContainer />
+            < ToastContainer limit={1} />
             <div className="w-full max-w-md space-y-8">
                 <div className="bg-white shadow-md rounded-md p-6">
                     <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
